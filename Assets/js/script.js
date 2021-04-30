@@ -40,15 +40,15 @@ $(document).ready(function () {
   //event handlers
   $(".saveBtn").on("click", function () {
     //need to capture the information that the user inputted and we need to store that info into local storage
-    var value = $(this).siblings(".desription").val();
+    var value = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
-
+    console.log(value);
     //save info to local storage
     localStorage.setItem(time, value);
   });
 
   //dispaly the items that are in local storage into the time bloacks
-  $("#hour-09 .description").val(localStorage.getItem("hour-9"));
+  $("#hour-9 .description").val(localStorage.getItem("hour-9"));
   $("#hour-10 .description").val(localStorage.getItem("hour-10"));
   $("#hour-11 .description").val(localStorage.getItem("hour-11"));
   $("#hour-12 .description").val(localStorage.getItem("hour-12"));
